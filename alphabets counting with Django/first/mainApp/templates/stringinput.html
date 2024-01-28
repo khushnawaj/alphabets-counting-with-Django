@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stringinput</title>
+</head>
+
+<body>
+    <button><a href="/">Home</a>
+    </button>
+    <form method="post" action="">
+        {% csrf_token %}
+        <textarea required name="data" rows="5" cols="60">{{data}}</textarea>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+{% if show %}
+
+    <table border="2px" cellpadding="10px">
+        <tr>
+            <th>Lower Case Vowels </th>
+            <td>{{lcv}}</td>
+        </tr>
+        <tr>
+            <th>Lower Case Consonent </th>
+            <td>{{lcc}}</td>
+        </tr>
+        <tr>
+            <th>Upper Case Vowels </th>
+            <td>{{ucv}}</td>
+        </tr>
+        <tr>
+            <th>UpperCase Consonent </th>
+            <td>{{ucc}}</td>
+        </tr>
+        <tr>
+            <th>Digit</th>
+            <td>{{digit}}</td>
+        </tr>
+        <tr>
+            <th>Special Charecters</th>
+            <td>{{special}}</td>
+        </tr>
+        <tr>
+            <th>Space</th>
+            <td>{{sp}}</td>
+        </tr>
+        <!-- <tr>
+            <th>Special Charecters</th>
+            <td>{special}</td>
+        </tr> -->
+        {% endif %}
+
+    </table>
+</body>
+
+</html>
